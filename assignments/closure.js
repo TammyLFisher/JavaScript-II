@@ -48,4 +48,32 @@ console.log( counter() );
   // `increment` should increment a counter variable in closure scope and return it.
   // `decrement` should decrement the counter variable and return it.
   
- 
+  function counter2(nameOfCounter) {
+    let counter = 0;
+  
+    function increment() {
+      counter = counter + 1;
+  
+      return("Number of " + nameOfCounter + ": " + counter);
+    };
+  
+    function decrement() {
+      counter = counter - 1;
+  
+      return("Number of " + nameOfCounter + ": " + counter);
+    };
+  
+    return {
+      increment : increment,
+      decrement : decrement
+    };
+  }
+  
+  let petsCounter = counter2("pets");
+  
+  console.log(petsCounter.increment());
+  console.log(petsCounter.increment());
+  console.log(petsCounter.increment());
+  console.log(petsCounter.increment()); 
+  console.log(petsCounter.decrement());
+  console.log(petsCounter.decrement());
