@@ -58,15 +58,15 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 let fullName = [];
 runners.forEach(function(runners) {
     console.log(runners);
-    let currentName=runners.first_name + " " + runners.last_name;
-    fullName.push(currentName);
+    let currenTName=runners.first_name + " " + runners.last_name;
+    fullName.push(currenTName);
 });
 console.log(fullName);
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
-let allCaps = runners.map(function(nowallCaps) { 
-    return nowallCaps.first_name.toUpperCase()});
+let allCaps = runners.map(function(nowAllCaps) { 
+    return nowAllCaps.first_name.toUpperCase()});
     console.log(allCaps)
 
 
@@ -93,21 +93,21 @@ console.log(ticketPriceTotal);
 // With forEach function, we can list out each runners' email address if we need to send out mass emails.
 let eMail = [];
 runners.forEach(function(runners) {
-    let adDress=runners.email;
-    eMail.push(adDress);
+    let adDreSs=runners.email;
+    eMail.push(adDreSs);
 });
 console.log(eMail);
 
 // Problem 2
 // If we wanted to know which business donated what amount, but don't want all the other info, we can use .map this way.
 
-let nameDonation = runners.map((donation)=>{
+let nameDonaTion = runners.map((donation)=>{
     return{'company_name':donation.company_name, 'donation':donation.donation};});
-    console.log(nameDonation)
+    console.log(nameDonaTion)
 
 // Problem 3
 // Rewarding businesses who donated more than $200 can be done with the .filter function.
 
-let moreThan200 = runners.filter(runners => runners.donation >200);
+let moReThan200 = runners.filter(runners => runners.donation >200);
 
-console.log(moreThan200);
+console.log(moReThan200);
