@@ -2,6 +2,16 @@
 
 const items = ["Pencil", "Notebook", "yo-yo", "Gum", "yo-yo", "Gum"];
 
+let func1 = function(param1) {
+  return param1
+}
+
+let func2 = function(param2) {
+  return param2 * 2
+}
+
+let arr1 = [1,2,3,4]
+
 /* 
 
   //Given this problem: 
@@ -27,32 +37,30 @@ const items = ["Pencil", "Notebook", "yo-yo", "Gum", "yo-yo", "Gum"];
 function getLength(arr, cb) {
   return cb(arr.length);
 }
-getLength(items, function(length) {
-  console.log(length);
-});
+console.log(getLength(arr1, func1));
+console.log(getLength(arr1, func2));
 
 // getLength passes the length of the array into the callback.
 
 function last(arr, cb) {
-  return cb(arr.last);
+  return cb(arr.slice(-1)[0]);
 }
 last(items, function(last) {
-  last = items.slice(-1)[0];
   console.log(last);
 });
 
 // last passes the last item of the array into the callback.
 function sumNums(x, y, cb) {
-  return x + y;
+  return cb(x + y);
 }
-console.log(sumNums(5, 6));
+console.log(sumNums(5, 6, func2));
 
 // sumNums adds two numbers (x, y) and passes the result to the callback.
 
 function multiplyNumbers(x, y, cb) {
-  return x * y;
+  return cb(x * y);
 }
-console.log(multiplyNumbers(5, 6));
+console.log(multiplyNumbers(5, 6, func1));
 
 // multiplyNums multiplies two numbers and passes the result to the callback.
 
