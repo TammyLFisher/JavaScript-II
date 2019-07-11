@@ -24,15 +24,16 @@ testFunc();
 
 
 // ==== Challenge 2: Create a counter function ====
-function cOuNTerFunc() {
+function counterFunc() {
   let count = 0;
 
   return function() {
-    return count++; 
+    count++;
+    return count;
   };
 }
 
-let counter = cOuNTerFunc();
+let counter = counterFunc();
 
 console.log( counter() );
 console.log( counter() );
